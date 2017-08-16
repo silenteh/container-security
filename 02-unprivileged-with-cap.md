@@ -6,8 +6,9 @@ Now let's try to run a container in an unprivileged mode, but add some capabilit
 docker run --rm -it --cap-add=SYS_ADMIN --security-opt apparmor:unconfined ubuntu
 ```
 
-If you see in this line we have explicitely disabled AppArmor.  
-Nedless to say: YOU SHOULD NEVER EVER DO THAT!  
+As we have seen from the slides, AppArmomr is configured by default and limits the access to certain dangerous paths.
+Here an example of what can go wrong when you disable and uninstall AppArmomr.  
+(This is done temporarely for this container only - needless to say NEVER EVER DO THIS EVER!)
 
 Try now from the container to change its hostname
 
