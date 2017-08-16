@@ -7,7 +7,7 @@ docker run --rm -it --cap-add=SYS_ADMIN --security-opt apparmor:unconfined ubunt
 ```
 
 As we have seen from the slides, AppArmomr is configured by default and limits the access to certain dangerous paths.
-Here an example of what can go wrong when you disable and uninstall AppArmomr.  
+Here an example of what can go wrong when you disable and uninstall AppArmor.  
 (This is done temporarely for this container only - needless to say NEVER EVER DO THIS EVER!)
 
 Try now from the container to change its hostname
