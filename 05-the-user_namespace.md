@@ -22,5 +22,10 @@ Restart now the docker daemon and check few things:
 
 #### Limitations
 
+There are known limitations for now when going with the user namespace, specifically:
 
+* sharing PID or NET namespaces with the host (--pid=host or --network=host)
+* --read-only container filesystem. This is a Linux kernel restriction against remounting an already-mounted filesystem with modified flags when inside a user namespace.
+* external volume drivers which are unaware or incapable of using daemon user mappings.
 
+If you can live with these limitations it's agood addition to your defence in depth strategy.
