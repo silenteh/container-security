@@ -1,0 +1,4 @@
+from ubuntu
+run useradd -ms /bin/bash sebastian
+user sebastian
+cmd /bin/bash
