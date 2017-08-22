@@ -72,4 +72,18 @@ Yep! ASLR is disabled now!
 AppArmor is really helping in this regard.  
 Once more: DO NOT DISABLE IT EVER.
 
+#### Reboot host
+
+But disabling ASLR is not the only attack one can do, how about rebooting the whole machine ?
+
+```
+echo 1 > /proc/sys/kernel/sysrq
+```
+
+Now just send the reboot signal....
+
+```
+mount -o rw,remount /proc/sysrq-trigger
+echo b > /proc/sysrq-trigger
+```
 
