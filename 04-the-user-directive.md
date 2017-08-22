@@ -10,6 +10,7 @@ Try now to `remount` or to install `build-essential`
 You can still fork-bomb the server though....try it yourself via:
 
 ```
+for i in {1..32325}; do sleep infinity & done
 ```
 
 So what can we do about it ?  
@@ -26,4 +27,9 @@ Now try to fork bomb.
 Try then to change the ulimit (Ex ulimit -u 1024)
 
 Now that's better! You can set any ulimit in this way.  
-To see the current values, inspect now the container.
+To see the current values, inspect now the container.  
+
+```
+docker container inspect CONTAINER_NAME
+```
+
